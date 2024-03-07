@@ -1,0 +1,48 @@
+{
+  "name": "adjust-chinese-ts",
+  "version": "1.0.9",
+  "description": "simple chinese to tradition chinese 簡體轉繁體",
+  "main": "./dist/adjust_chinese2tc.js",
+  "module": "./dist/adjust_chinese2tc.mjs",
+  "types": "./dist/adjust_chinese2tc.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/adjust_chinese2tc.js",
+      "import": "./dist/adjust_chinese2tc.mjs",
+      "types": "./dist/adjust_chinese2tc.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/adjust_chinese2tc.ts src/updown-instead-fsapi.ts --format cjs,esm --dts --clean",
+    "watch": "npm run build -- --watch src",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creatxrgithub/adjust-chinese.git"
+  },
+  "keywords": [
+    "chinese",
+    "tradition",
+    "簡轉繁",
+    "簡體轉繁體"
+  ],
+  "author": "creatxr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/creatxrgithub/adjust-chinese/issues"
+  },
+  "homepage": "https://github.com/creatxrgithub/adjust-chinese#readme",
+  "dependencies": {
+    "chardet": "^1.3.0",
+    "native-file-system-adapter": "^3.0.0"
+  },
+  "browser": {
+    "fs": "./src/updown-instead-fsapi"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
