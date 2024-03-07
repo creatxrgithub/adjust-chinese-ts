@@ -1,7 +1,11 @@
 # simple chinese to tradiction chinese 簡體轉繁體，或者說是簡化字轉正體字，及異體字擇用的工具包。
 
 用 typescript 重寫了一次，以方便在如 ionic 的項目中使用。導入導出的方式作了點更改：
-**const { ChineseAdjustor } = require** / **import { ChineseAdjustor } from**
+
+**const { ChineseAdjustor } = require**
+
+**import { ChineseAdjustor } from**
+
 ~~const ChineseAdjustor = require~~
 
 ```
